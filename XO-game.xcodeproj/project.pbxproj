@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90378932738361A007B2B09 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A903789227383619007B2B09 /* StartViewController.swift */; };
+		A9037895273837CA007B2B09 /* MachineGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9037894273837CA007B2B09 /* MachineGameState.swift */; };
+		A903789727384FAE007B2B09 /* MultistepsGameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A903789627384FAE007B2B09 /* MultistepsGameState.swift */; };
+		A98107F2273C4E18003999CC /* StepCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98107F1273C4E18003999CC /* StepCommands.swift */; };
+		A98107F5273C4EE2003999CC /* StepsInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98107F4273C4EE2003999CC /* StepsInvoker.swift */; };
+		A98107F7273C5CB5003999CC /* FiveStepsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98107F6273C5CB5003999CC /* FiveStepsState.swift */; };
+		A98107F9273C5D74003999CC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98107F8273C5D74003999CC /* Game.swift */; };
 		DB5F974027344C91003E5E6B /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F973F27344C91003E5E6B /* GameState.swift */; };
 		DB5F974227344D05003E5E6B /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F974127344D05003E5E6B /* PlayerInputState.swift */; };
 		DB5F974427345031003E5E6B /* WinnerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB5F974327345031003E5E6B /* WinnerState.swift */; };
@@ -29,6 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A903789227383619007B2B09 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		A9037894273837CA007B2B09 /* MachineGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineGameState.swift; sourceTree = "<group>"; };
+		A903789627384FAE007B2B09 /* MultistepsGameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultistepsGameState.swift; sourceTree = "<group>"; };
+		A98107F1273C4E18003999CC /* StepCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepCommands.swift; sourceTree = "<group>"; };
+		A98107F4273C4EE2003999CC /* StepsInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsInvoker.swift; sourceTree = "<group>"; };
+		A98107F6273C5CB5003999CC /* FiveStepsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStepsState.swift; sourceTree = "<group>"; };
+		A98107F8273C5D74003999CC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		DB5F973F27344C91003E5E6B /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		DB5F974127344D05003E5E6B /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
 		DB5F974327345031003E5E6B /* WinnerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerState.swift; sourceTree = "<group>"; };
@@ -63,12 +77,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A98107F3273C4E1C003999CC /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				A98107F1273C4E18003999CC /* StepCommands.swift */,
+				A98107F4273C4EE2003999CC /* StepsInvoker.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
 		DB5F973E27344C88003E5E6B /* States */ = {
 			isa = PBXGroup;
 			children = (
 				DB5F973F27344C91003E5E6B /* GameState.swift */,
 				DB5F974127344D05003E5E6B /* PlayerInputState.swift */,
 				DB5F974327345031003E5E6B /* WinnerState.swift */,
+				A9037894273837CA007B2B09 /* MachineGameState.swift */,
+				A903789627384FAE007B2B09 /* MultistepsGameState.swift */,
+				A98107F6273C5CB5003999CC /* FiveStepsState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -103,8 +129,10 @@
 				DB5F974727345DC6003E5E6B /* Analytics */,
 				DB5F973E27344C88003E5E6B /* States */,
 				F874E4702224621100364CAE /* AppDelegate.swift */,
+				A903789227383619007B2B09 /* StartViewController.swift */,
 				F874E4722224621100364CAE /* GameViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
+				A98107F3273C4E1C003999CC /* Commands */,
 				F874E4E62225CB3F00364CAE /* Models */,
 				F874E4E52225CB3100364CAE /* Views */,
 				F874E4772224621300364CAE /* Assets.xcassets */,
@@ -142,6 +170,7 @@
 				F874E4F22225E0B100364CAE /* GameboardSize.swift */,
 				F874E4F42225E2CD00364CAE /* Gameboard.swift */,
 				F874E4EE2225DE4500364CAE /* Player.swift */,
+				A98107F8273C5D74003999CC /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,18 +250,25 @@
 				F874E4732224621100364CAE /* GameViewController.swift in Sources */,
 				DB5F974427345031003E5E6B /* WinnerState.swift in Sources */,
 				F874E4DD2225C25D00364CAE /* GameboardPosition.swift in Sources */,
+				A98107F5273C4EE2003999CC /* StepsInvoker.swift in Sources */,
 				DB5F974927345DD2003E5E6B /* AnalyticsManager.swift in Sources */,
 				F874E4DF2225C76000364CAE /* MarkView.swift in Sources */,
 				F874E4F12225DFF700364CAE /* Referee.swift in Sources */,
 				F874E4F52225E2CD00364CAE /* Gameboard.swift in Sources */,
 				DB5F9746273456CC003E5E6B /* Copying.swift in Sources */,
 				F874E4712224621100364CAE /* AppDelegate.swift in Sources */,
+				A90378932738361A007B2B09 /* StartViewController.swift in Sources */,
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,
 				F874E4E42225CB0700364CAE /* XView.swift in Sources */,
+				A903789727384FAE007B2B09 /* MultistepsGameState.swift in Sources */,
+				A98107F2273C4E18003999CC /* StepCommands.swift in Sources */,
+				A98107F7273C5CB5003999CC /* FiveStepsState.swift in Sources */,
 				DB5F974027344C91003E5E6B /* GameState.swift in Sources */,
+				A9037895273837CA007B2B09 /* MachineGameState.swift in Sources */,
 				F874E4DB2225C1AC00364CAE /* GameboardView.swift in Sources */,
 				F874E4EF2225DE4500364CAE /* Player.swift in Sources */,
+				A98107F9273C5D74003999CC /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,13 +415,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6G4AKDTMLW;
+				DEVELOPMENT_TEAM = CY87MBJTCB;
 				INFOPLIST_FILE = "XO-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "plasmon.XO-game";
+				PRODUCT_BUNDLE_IDENTIFIER = "irklch.XO-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,13 +433,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6G4AKDTMLW;
+				DEVELOPMENT_TEAM = CY87MBJTCB;
 				INFOPLIST_FILE = "XO-game/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "plasmon.XO-game";
+				PRODUCT_BUNDLE_IDENTIFIER = "irklch.XO-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

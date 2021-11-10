@@ -10,14 +10,17 @@ class WinnerState: GameState {
     var isCompleted: Bool = false
     
     let winnerPlayer: Player?
+    let isMachinaGame: Bool
     private weak var gameViewController: GameViewController?
     
     init(
         winnerPlayer: Player?,
-        gameViewController: GameViewController?
+        gameViewController: GameViewController?,
+        isMachinaGame: Bool
     ) {
         self.winnerPlayer = winnerPlayer
         self.gameViewController = gameViewController
+        self.isMachinaGame = isMachinaGame
     }
     
     func begin() {
@@ -38,9 +41,17 @@ class WinnerState: GameState {
     func addMark(at position: GameboardPosition) { }
     
     private func winnerName(_ winner: Player) -> String {
-        switch winner {
-        case .first: return "1st player"
-        case .second: return "2nd player"
+        if isMachinaGame {
+            switch winner {
+            case .first: return "1st player"
+            case .second: return "Computer"
+            }
+        }
+        else {
+            switch winner {
+            case .first: return "1st player"
+            case .second: return "2nd player"
+            }
         }
     }
 }
